@@ -27,8 +27,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TabController _tabController;
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -50,7 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: Icon(choice.icon),
               );
             }).toList(),
-            controller: _tabController,
           ),
         ),
         body: TabBarView(
