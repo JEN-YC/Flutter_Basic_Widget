@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -52,13 +52,13 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: TabBarView(
             children: tabList.map((choice) {
-          return Center(
-            child: Icon(
-              choice.icon,
-              size: 100.0,
-            ),
-          );
-        }).toList()),
+              return Center(
+                child: Icon(
+                  choice.icon,
+                  size: 100.0,
+                ),
+              );
+            }).toList()),
       ),
     );
   }
